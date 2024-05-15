@@ -4,6 +4,7 @@ import 'package:hive_flutter/hive_flutter.dart';
 import '../components/dialogBox.dart';
 import '../components/todo_tiles.dart';
 import '../data/database.dart';
+import '../constants/colors.dart';
 
 
 class Home extends StatefulWidget {
@@ -83,11 +84,11 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.yellow[200],
+      backgroundColor: tdBGColor,
       appBar: AppBar(
-        backgroundColor: Colors.yellow,
+        backgroundColor: tdBlue,
         centerTitle: true,
-        title: Text('ToDo'),
+        title: Text('All ToDo\'s', style: TextStyle(color: Colors.white),),
         elevation: 10,
       ),
       floatingActionButton: FloatingActionButton(

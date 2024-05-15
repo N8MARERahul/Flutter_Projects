@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import '../screens/home.dart';
+import '../constants/colors.dart';
 
 void main() async {
 
@@ -21,7 +22,13 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'TODO App',
       home: Home(),
-      theme: ThemeData(primaryColor: Colors.yellow),
+      theme: ThemeData(
+        primaryColor: tdBGColor,
+        floatingActionButtonTheme: const FloatingActionButtonThemeData(
+          backgroundColor: tdBlue,
+          foregroundColor: Colors.white,
+        ),
+      ),
     );
   }
 }
